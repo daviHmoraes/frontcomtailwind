@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Open Sans';
+}
+
+:root {
+    --contrast-text-color: #FFF;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    font-family: "Outfit", sans-serif;   
+}
+
+/* --HEADER-- */
+
+header {
+    background-image: url(/img/background-image.png);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw;
+}
+
+#logo {
+    height: 8vw;
+    width: auto;
+}
+
+#hamburguer-menu {
+    height: 7vw;
+    width: auto;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    min-height: 110vh;
+    padding: 5vh 5vw;
+}
+
+.hero-content {
+    color: var(--contrast-text-color);
+    display: flex;
+    
+    gap: 5vw;
+}
+
+.hero-content h1 {
+    font-size: clamp(1rem, 10vw, 4rem);
+}
+
+.hero-content p {
+    font-size: clamp(0.5rem, 5vw, 3rem);
+    font-weight: 200;
+}
