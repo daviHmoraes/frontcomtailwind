@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ehya - Home Page</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">   
 
     <!--OPEN SANS FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,195 +15,246 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--TAILWIND-->
+    <link rel="stylesheet" href="./src/output.css">
+
 </head>
 
 <body>
-    <header>
+    <header class="bg-[url(/img/background-image.png)] bg-no-repeat bg-cover">
 
-        <section class="header">
+        <section class="flex justify-between items-center p-[5vw]">
             <img id="logo" src="/img/Logo.svg" alt="Ehya Company Logo">
             <img id="hamburguer-menu" src="/img/hamburguer-menu.svg" alt="Hamburguer menu Icon">
+        
+            <div id="nav">
+                <p>Home</p>
+    
+                <div class="chevron-topic">
+                    <p>Landings</p>
+                    <img src="/img/white-chevron-down.svg" alt="Chevron Icon Pointing Down">
+                </div>
+
+                <div class="chevron-topic">
+                    <p>Pages</p>
+                    <img src="/img/white-chevron-down.svg" alt="Chevron Icon Pointing Down">
+                </div>
+
+                <p>Docs</p>
+                <p>Help</p>
+
+                <button id="cta-button">Get it now</button>
+            </div>
+
         </section>
 
-        <section class="hero">
+        <section class="flex flex-col items-center text-center min-h-[100vh] py-[5vh] px-[5vw] gap-[10vw]">
 
-            <div class="hero-content">
-                <h1>
+            <div class="flex flex-col gap-[5vw] text-[var(--contrast-text-color)]">
+                <h1 class="text-[length:var(--mobile-clamp-32px)]">
                     Start Exploring to
                     Find Inner Peace
                     by Traveling
                 </h1>
 
-                <p>
+                <p class="text-[length:var(--mobile-clamp-16px)] font-extralight leading-[8vw]">
                     Lost yourself with Vacation and 
                     Travel into the place that you never 
                     visit before. We have thousand 
                     places in our database for you.
                 </p>
-            </div>
 
-            <div class="form-card">
-                <h2>
+                <img id="desktop-arrow" src="/img/desktop-blue-arrow.svg" alt="Blue Arrow Poinst South">
+
+            </div>
+            
+            <div class="flex 
+                        flex-col
+
+                        bg-[var(--contrast-text-color)]
+                        rounded-lg
+
+                        p-[5vw]
+                        gap-[3vw]">
+
+                <h2 class="text-[var(--main-text-color)]
+                            text-[length:var(--mobile-clamp-20px)]">
+
                     You can start search here
                 </h2>
+                
+                <p class="text-[var(--secondary-text-color)]
+                            text-[length:var(--mobile-clamp-14px)]
+                            font-normal
+                            leading-[7.5vw]">
 
-                <p>
                     Find thousand destination for travelling 
                     with best prices. Apply “EHYA50” Code 
                     on Payment Process.
                 </p>
+                
+                <form class="flex flex-col gap-[7vw] text-left">
 
-                <form>
-                    <div class="field">
-                        <label for="where">Where</label>
-                        <input type="text" id="where" name="where" placeholder="Anywhere">
+                    <div class="flex flex-col gap-[2vw]">
+                        <label for="where" class="text-[var(--secondary-text-color)] text-[length:var(--mobile-clamp-14px)]">Where</label>
+                        <input type="text" id="where" name="where" placeholder="Anywhere" class="h-[10vw] px-2 text-[length:var(--mobile-clamp-14px)] text-[var(--input-border-color)] border border-solid border-[var(--input-border-color)] rounded-lg">
                     </div>
-
-                    <div class="field">
-                        <label for="checkin">Check In</label>
-                        <input type="date" id="checkin" name="checkin">
+                    
+                    <div class="flex flex-col gap-[2vw]">
+                        <label for="checkin" class="text-[var(--secondary-text-color)] text-[length:var(--mobile-clamp-14px)]">Check In</label>
+                        <input type="date" id="checkin" name="checkin" class="h-[10vw] px-2 text-[length:var(--mobile-clamp-14px)] text-[var(--input-border-color)] border border-solid border-[var(--input-border-color)] rounded-lg">
                     </div>
-
-                    <div class="field">
-                        <label for="checkout">Check Out</label>
-                        <input type="date" id="checkout" name="checkout">
+                    
+                    <div class="flex flex-col gap-[2vw]">
+                        <label for="checkout" class="text-[var(--secondary-text-color)] text-[length:var(--mobile-clamp-14px)]">Check Out</label>
+                        <input type="date" id="checkout" name="checkout" class="h-[10vw] px-2 text-[length:var(--mobile-clamp-14px)] text-[var(--input-border-color)] border border-solid border-[var(--input-border-color)] rounded-lg">
                     </div>
-
-                    <div class="field">
-                        <label for="guests">Guests</label>
-                        <input type="text" id="guests" name="guests" placeholder="Guests">
+                    
+                    <div class="flex flex-col gap-[2vw]">
+                        <label for="guests" class="text-[var(--secondary-text-color)] text-[length:var(--mobile-clamp-14px)]">Guests</label>
+                        <input type="text" id="guests" name="guests" placeholder="Guests" class="h-[10vw] px-2 text-[length:var(--mobile-clamp-14px)] text-[var(--input-border-color)] border border-solid border-[var(--input-border-color)] rounded-lg">
                     </div>
-
-                    <input id="submit" type="submit" value="Search">
+                    
+                    <input 
+                        id="submit" 
+                        type="submit" 
+                        value="Search"
+                        class=" bg-[var(--submit-button-color)]
+                                border-0
+                                text-[var(--contrast-text-color)]
+                                text-[length:var(--mobile-clamp-16px)]
+                                font-semibold"
+                    >
                 </form>
             </div>
 
-            <img class="arrow" src="/img/south-arrow.svg" alt="South Pointing Arrow">
-
+            <img id="mobile-arrow" src="/img/south-arrow.svg" alt="South Pointing Arrow">
+            
         </section>
     </header>
 
     <main>
-        <section class="benefits">
-            <h2>
+        <section class="flex flex-col text-center py-[10vh] px-[7vw] gap-[7.5vw]">
+            <h2 class="text-[length:var(--mobile-clamp-28px)] text-[var(--main-text-color)]">
                 Travelya Benefit 
                 for User
             </h2>
 
-            <p>
+            <p class="text-[length:var(--mobile-clamp-16px)] text-[var(--secondary-text-color)] font-light leading-[7.5vw]">
                 We are self-service data analytics 
                 software that lets you create visually 
                 appealing data visualizations and 
                 insightful dashboards in minutes.
             </p>
 
-            <div class="cards">
-                <div class="card">
-                    <img src="/img/card-icon/cheap-icon.svg" alt="Label Icon">
+            <div class="flex flex-col gap-[5vw]">
+                <div class="flex justify-between items-start p-[3vw] gap-[5vw] text-left border border-solid border-[var(--card-border-color)] rounded-lg">
+                    <img src="/img/card-icon/cheap-icon.svg" alt="Label Icon" class="bg-[#1565d833] p-[1vw] h-auto w-[12.5vw] rounded-[5px]">
                     
-                    <div class="card-content">
-                        <h3>
+                    <div class="flex flex-col items-start text-left pt-0 pr-[5vw] pb-[5vw] pl-[5vw] gap-[3vw]">
+                        <h3 class="text-[clamp(0.5rem, 5vw, 3rem)] text-[var(--main-text-color)]">
                             Cheap than Other
                         </h3>
-                        <p>
+                        <p class="text-[length:var(--mobile-clamp-14px)]">
                             Travelya is cheaper than other 
                             travel agency.
                         </p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="/img/card-icon/secure-icon.png" alt="Shield Icon">
+                <div class="flex justify-between items-start p-[3vw] gap-[5vw] text-left border border-solid border-[var(--card-border-color)] rounded-lg">
+                    <img src="/img/card-icon/secure-icon.png" alt="Shield Icon" class="bg-[#1565d833] p-[1vw] h-auto w-[12.5vw] rounded-[5px]">
                     
-                    <div class="card-content">
-                        <h3>
+                    <div class="flex flex-col items-start text-left pt-0 pr-[5vw] pb-[5vw] pl-[5vw] gap-[3vw]">
+                        <h3 class="text-[clamp(0.5rem, 5vw, 3rem)] text-[var(--main-text-color)]">
                             Secure Payment
                         </h3>
-                        <p>
+                        <p class="text-[length:var(--mobile-clamp-14px)]">
                             You can pay your book without 
                             doubt again.
                         </p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="/img/card-icon/free-icon.svg" alt="AC Icon">
+                <div class="flex justify-between items-start p-[3vw] gap-[5vw] text-left border border-solid border-[var(--card-border-color)] rounded-lg">
+                    <img src="/img/card-icon/free-icon.svg" alt="AC Icon" class="bg-[#1565d833] p-[1vw] h-auto w-[12.5vw] rounded-[5px]">
                     
-                    <div class="card-content">
-                        <h3>
+                    <div class="flex flex-col items-start text-left pt-0 pr-[5vw] pb-[5vw] pl-[5vw] gap-[3vw]">
+                        <h3 class="text-[clamp(0.5rem, 5vw, 3rem)] text-[var(--main-text-color)]">
                             Free Amenities
                         </h3>
-                        <p>
+                        <p class="text-[length:var(--mobile-clamp-14px)]">
                             We guarantee you can give free amenities wherever
                             you are.
                         </p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="/img/card-icon/top-icon.svg" alt="Crown Icon">
+                <div class="flex justify-between items-start p-[3vw] gap-[5vw] text-left border border-solid border-[var(--card-border-color)] rounded-lg">
+                    <img src="/img/card-icon/top-icon.svg" alt="Crown Icon" class="bg-[#1565d833] p-[1vw] h-auto w-[12.5vw] rounded-[5px]">
                     
-                    <div class="card-content">
-                        <h3>
+                    <div class="flex flex-col items-start text-left pt-0 pr-[5vw] pb-[5vw] pl-[5vw] gap-[3vw]">
+                        <h3 class="text-[clamp(0.5rem, 5vw, 3rem)] text-[var(--main-text-color)]">
                             Top Rated
                         </h3>
-                        <p>
+                        <p class="text-[length:var(--mobile-clamp-14px)]">
                             Only show best destination 
                             with 1000+ super review user
                         </p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="/img/card-icon/best-icon.svg" alt="Medal Icon">
+                <div class="flex justify-between items-start p-[3vw] gap-[5vw] text-left border border-solid border-[var(--card-border-color)] rounded-lg">
+                    <img src="/img/card-icon/best-icon.svg" alt="Medal Icon" class="bg-[#1565d833] p-[1vw] h-auto w-[12.5vw] rounded-[5px]">
                     
-                    <div class="card-content">
-                        <h3>
+                    <div class="flex flex-col items-start text-left pt-0 pr-[5vw] pb-[5vw] pl-[5vw] gap-[3vw]">
+                        <h3 class="text-[clamp(0.5rem, 5vw, 3rem)] text-[var(--main-text-color)]">
                             Best Offers
                         </h3>
-                        <p>
+                        <p class="text-[length:var(--mobile-clamp-14px)]">
                             Inform you about all best 
                             offers for all destination
                         </p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="/img/card-icon/easy-icon.svg" alt="Like Icon">
+                <div class="flex justify-between items-start p-[3vw] gap-[5vw] text-left border border-solid border-[var(--card-border-color)] rounded-lg">
+                    <img src="/img/card-icon/easy-icon.svg" alt="Like Icon" class="bg-[#1565d833] p-[1vw] h-auto w-[12.5vw] rounded-[5px]">
                     
-                    <div class="card-content">
-                        <h3>
+                    <div class="flex flex-col items-start text-left pt-0 pr-[5vw] pb-[5vw] pl-[5vw] gap-[3vw]">
+                        <h3 class="text-[clamp(0.5rem, 5vw, 3rem)] text-[var(--main-text-color)]">
                             Easy Book
                         </h3>
-                        <p>
+                        <p class="text-[length:var(--mobile-clamp-14px)]">
                             Follow flow, Click, Pay. Wait. 
                             Just wait e-ticket
                         </p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="/img/card-icon/refund-icon.svg" alt="Hands Shell Icon">
+                <div class="flex justify-between items-start p-[3vw] gap-[5vw] text-left border border-solid border-[var(--card-border-color)] rounded-lg">
+                    <img src="/img/card-icon/refund-icon.svg" alt="Hands Shell Icon" class="bg-[#1565d833] p-[1vw] h-auto w-[12.5vw] rounded-[5px]">
                     
-                    <div class="card-content">
-                        <h3>
+                    <div class="flex flex-col items-start text-left pt-0 pr-[5vw] pb-[5vw] pl-[5vw] gap-[3vw]">
+                        <h3 class="text-[clamp(0.5rem, 5vw, 3rem)] text-[var(--main-text-color)]">
                             Fast Refund
                         </h3>
-                        <p>
+                        <p class="text-[length:var(--mobile-clamp-14px)]">
                             If you canceled. We can refund 
                             your money 1x12
                         </p>
                     </div>
                 </div>      
                 
-                <div class="card">
-                    <img src="/img/card-icon/support-icon.svg" alt="Headphone Icon">
+                <div class="flex justify-between items-start p-[3vw] gap-[5vw] text-left border border-solid border-[var(--card-border-color)] rounded-lg">
+                    <img src="/img/card-icon/support-icon.svg" alt="Headphone Icon" class="bg-[#1565d833] p-[1vw] h-auto w-[12.5vw] rounded-[5px]">
                     
-                    <div class="card-content">
-                        <h3>
+                    <div class="flex flex-col items-start text-left pt-0 pr-[5vw] pb-[5vw] pl-[5vw] gap-[3vw]">
+                        <h3 class="text-[clamp(0.5rem, 5vw, 3rem)] text-[var(--main-text-color)]">
                             24/7 Support
                         </h3>
-                        <p>
+                        <p class="text-[length:var(--mobile-clamp-14px)]">
                             We’re ready help you anytime 
                             and anywhere you are.
                         </p>
@@ -212,182 +263,205 @@
             </div>
         </section>
 
-        <section class="popular-destinations">
-            <h2>
-                Popular Destinations
-            </h2>
+        <section class="flex flex-col items-center text-center bg-[var(--popular-destination-background-color)] py-[4vh] px-[3.5vw] gap-[4vh]">
 
-            <div class="destinations">
-                <div class="destination">
-                    <img src="/img/destinations/venice.png" alt="Aerial Footage of Venice - Italy">
-                    <h3>
-                        Venice, Italy
-                    </h3>
-                    <p>
-                        Travelling into the popular river in Italy
-                    </p>
-                    <button class="see-offers">
+            <div class="popular-header">
+                <h2 class="text-[var(--main-text-color)] font-bold text-[length:var(--mobile-clamp-28px)]">
+                    Popular Destinations
+                </h2>
+
+                <div id="header-see-all-offers">
+                    <a href="#">See All Offers</a>
+                    <img src="/img/blue-east-arrow.svg" alt="East Pointing Arrow">
+                 </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-[7.5vw]">
+                <div  id="venice" class="bg-no-repeat bg-cover flex flex-col justify-end gap-[2.5vw] h-[100vw] w-[85vw] p-[5vw] rounded-lg text-[var(--contrast-text-color)] bg-[url(/img/destinations/venice.png)]">
+                    <div class="destination-content">
+                        <h3 class="text-[length:var(--mobile-clamp-24px)]">
+                            Venice, Italy
+                        </h3>
+                        <p class="text-[length:var(--mobile-clamp-14px)] font-extralight">
+                            Travelling into the popular river in Italy
+                        </p>
+                    </div>
+                    <button class="bg-[var(--contrast-text-color)] border-0 self-center text-[var(--submit-button-color)] font-['Open_Sans',_sans-serif] font-bold text-[length:var(--mobile-clamp-16px)] py-[3vw] w-[45%] rounded-[2000px]">
                         See Offers
                     </button>
                 </div>
     
-                <div class="destination">
-                    <img src="/img/destinations/paris.png" alt="Aerial Footage of Paris - France">
-                    <h3>
-                        Paris, France
-                    </h3>
-                    <p>
-                        Romance in popular world landmark
-                    </p>
-                    <button class="see-offers">
+                <div id="paris" class="bg-no-repeat bg-cover flex flex-col justify-end gap-[2.5vw] h-[100vw] w-[85vw] p-[5vw] rounded-lg text-[var(--contrast-text-color)] bg-[url(/img/destinations/paris.png)]" >
+                    <div class="destination-content">
+                        <h3 class="text-[length:var(--mobile-clamp-24px)]">
+                            Paris, France
+                        </h3>
+                        <p class="text-[length:var(--mobile-clamp-14px)] font-extralight">
+                            Romance in popular world landmark
+                        </p>
+                    </div>
+                    <button class="bg-[var(--contrast-text-color)] border-0 self-center text-[var(--submit-button-color)] font-['Open_Sans',_sans-serif] font-bold text-[length:var(--mobile-clamp-16px)] py-[3vw] w-[45%] rounded-[2000px]">
                         See Offers
                     </button>
                 </div>
     
-                <div class="destination">
-                    <img src="/img/destinations/bali.png" alt="Aerial Footage of Bali - Indonesia">
-                    <h3>
-                        Bali, Indonesia
-                    </h3>
-                    <p>
-                        See best sunset ver in the world 
-                    </p>
-                    <button class="see-offers">
+                <div id="bali" class="bg-no-repeat bg-cover flex flex-col justify-end gap-[2.5vw] h-[100vw] w-[85vw] p-[5vw] rounded-lg text-[var(--contrast-text-color)] bg-[url(/img/destinations/bali.png)]">
+                    <div class="destination-content">
+                        <h3 class="text-[length:var(--mobile-clamp-24px)]">
+                            Bali, Indonesia
+                        </h3>
+                        <p class="text-[length:var(--mobile-clamp-14px)] font-extralight">
+                            See best sunset ver in the world 
+                        </p>
+                    </div>
+                    <button class="bg-[var(--contrast-text-color)] border-0 self-center text-[var(--submit-button-color)] font-['Open_Sans',_sans-serif] font-bold text-[length:var(--mobile-clamp-16px)] py-[3vw] w-[45%] rounded-[2000px]">
                         See Offers
                     </button>
                 </div>
     
-                <div class="destination">
-                    <img src="/img/destinations/bali.png" alt="Aerial Footage of Santorini - Greece">
-                    <h3>
-                        Santorini, Greece
-                    </h3>
-                    <p>
-                        Visit the 1000 Gods Country
-                    </p>
-                    <button class="see-offers">
+                <div id="santorini" class="bg-no-repeat bg-cover flex flex-col justify-end gap-[2.5vw] h-[100vw] w-[85vw] p-[5vw] rounded-lg text-[var(--contrast-text-color)] bg-[url(/img/destinations/santorini.png)]">
+                    <div class="destination-content">
+                        <h3 class="text-[length:var(--mobile-clamp-24px)]">
+                            Santorini, Greece
+                        </h3>
+                        <p class="text-[length:var(--mobile-clamp-14px)] font-extralight">
+                            Visit the 1000 Gods Country
+                        </p>
+                    </div>
+                    <button class="bg-[var(--contrast-text-color)] border-0 self-center text-[var(--submit-button-color)] font-['Open_Sans',_sans-serif] font-bold text-[length:var(--mobile-clamp-16px)] py-[3vw] w-[45%] rounded-[2000px]">
                         See Offers
                     </button>
                 </div>
             </div>
 
-            <div class="see-offers">
-                <a href="#">See All Offers</a>
-                <img src="/img/east-arrow.svg" alt="East Pointing Arrow">
+            <div class="flex items-center gap-[5vw]">
+                <a href="#" class="text-[length:var(--mobile-clamp-20px)] text-[var(--submit-button-color)] font-semibold decoration-0">See All Offers</a>
+                <img src="/img/blue-east-arrow.svg" alt="East Pointing Arrow" class="h-[5vw] w-auto">
             </div>
         </section>
 
-        <section class="about-travelya">
-            <h3>
-                ABOUT TRAVELYA
-            </h3>
+        <section class="flex flex-col items-center text-center py-[4vh] px-[5vw] gap-[4vh]">
 
-            <h2>
-                Everyone Needs Travel. Needs a Holiday.
-                Want to Break Free for a While  
-            </h2>
-
-            <img src="/img/recommended-destination.png" alt="Beach Umbrella Footage">
-
-            <div>
-                <img src="/img/search.svg" alt="Search Bloom Icon">
-                <p>Recommended Destination</p>
-            </div>
-
-            <h2>
-                We have More than 1000 
-                Selected Destination
-            </h2>
-
-            <p>
-                You can choose one of many option 
-                that we have on Our Website. Every 
-                destination have been 4+ star rated 
-                by our user before. You can search 
-                by clicking our button on below of 
-                the this text man.
-            </p>
-
-            <button class="search-destination">
-                Search Destination
-            </button>
-
-            <div class="holiday-card">
-                <span class="discount">DISC 50%</span>
-                <h3>
-                    Holiday in Bali Island
+            <div class="flex flex-col gap-[5vw]">
+                <h3 class="text-[var(--subtitle-text-color)] text-[length:var(--mobile-clamp-14px)]">
+                    ABOUT TRAVELYA
                 </h3>
-                <p>
-                    Stay 3 night at Seminyak Hotel Bali
-                </p>
-                <button class="redeem-now">Redeem Now</button>
+
+                <h1 class="text-[var(--main-text-color)] text-[length:var(--mobile-clamp-28px)] font-bold">
+                    Everyone Needs Travel. Needs a Holiday.<br>
+                    Want to Break Free <br> for a While  
+                </h1>
             </div>
 
-            <div class="promo">
-                <h2>
-                    Always give you Promo 
+            <div id="umbrella-card" class="bg-[url(/img/recommended-destination.png)] bg-no-repeat bg-cover flex flex-col justify-end h-[100vw] w-[90vw] rounded-lg">
+                <div class="bg-[var(--contrast-text-color)] flex items-end gap-[5vw] p-[5vw] rounded-lg text-[length:var(--mobile-clamp-16px)] text-[var(--secondary-text-color)]">
+                    <img src="/img/search.svg" alt="Search Bloom Icon" class="h-[6vw]">
+                    <p class="font-['Open_Sans', sans-serif]">Recommended Destination</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-[5vw]">
+                <h2 class="text-[var(--main-text-color)] text-[length:var(--mobile-clamp-24px)]">
+                    We have More than 1000 
+                    Selected Destination
+                </h2>
+
+                <p class="text-[var(--secondary-text-color)] text-[length:var(--mobile-clamp-16px)]">
+                    You can choose one of many option 
+                    that we have on Our Website. Every 
+                    destination have been 4+ star rated <br>
+                    by our user before. You can search <br>
+                    by clicking our button on below of <br>
+                    the this text man.
+                </p>
+
+                <button class="bg-[var(--contrast-text-color)] text-[length:var(--mobile-clamp-16px)] text-[var(--submit-button-color)] font-bold border border-solid border-[var(--submit-button-color)] rounded-[2000px] py-[2.3vw] px-[7vw]">
+                    Search Destination
+                </button>
+            </div>
+
+            <div class="flex flex-col items-start mx-[5vw] mb-[5vw] gap-[3vw] shadow-[5px_5px_15px_0px_rgba(0,0,0,0.1)] rounded-lg">
+                <div class="bg-[url(/img/holiday-image.png)] bg-no-repeat bg-cover flex flex-col justify-end gap-[2.5vw] h-[60vw] w-[75vw] p-[5vw] rounded-tl-lg rounded-tr-lg"></div>
+                <div class="flex flex-col items-start text-left pr-[5vw] pb-[5vw] pl-[5vw] gap-[3vw]">
+                    <span class="text-[var(--discount-text-color)] text-[length:var(--mobile-clamp-14px)] font-bold">DISC 50%</span>
+                    <h3 class="text-[length:var(--mobile-clamp-24px)] text-[var(--main-text-color)]">
+                        Holiday in Bali Island
+                    </h3>
+                    <p class="text-[length:var(--mobile-clamp-16px)] text-[var(--secondary-text-color)] font-semibold">
+                        Stay 3 night at Seminyak Hotel Bali
+                    </p>
+                    <button class="bg-[var(--submit-button-color)] text-[var(--contrast-text-color)] border-0 rounded-lg py-[2vw] px-[5vw] text-[length:var(--mobile-clamp-16px)] font-semibold">Redeem Now</button>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-[6vw]">
+                <h2 class="text-[length:var(--mobile-clamp-28px)]">
+                    Always give you Promo <br>
                     on every Month / Event
                 </h2>
-                <p>
+                <p class="text-[var(--secondary-text-color)] text-[length:var(--mobile-clamp-16px)]">
                     We make sure give you a lot of 
                     promo every month or event based 
                     on calendar. If you want, Just 
                     subscribe on Newsletter.
                 </p>
 
-                <div class="pros">
-                    <img src="/img/pros-icon.svg" alt="Right Simbol Icon">
+                <div class="flex gap-[5vw]">
+                    <img src="/img/pros-icon.svg" alt="Right Simbol Icon" class="h-[4vw] w-auto">
                     <p>25% for New Members</p>
                 </div>
                 
-                <div class="pros">
-                    <img src="/img/pros-icon.svg" alt="Right Simbol Icon">
+                <div class="flex gap-[5vw]">
+                    <img src="/img/pros-icon.svg" alt="Right Simbol Icon" class="h-[4vw] w-auto">
                     <p>Cancelled refund 100%</p>
                 </div>
                 
-                <div class="pros">
-                    <img src="/img/pros-icon.svg" alt="Right Simbol Icon">
+                <div class="flex gap-[5vw]">
+                    <img src="/img/pros-icon.svg" alt="Right Simbol Icon" class="h-[4vw] w-auto">
                     <p>Up 50% on your birthday</p>
                 </div>
                 
-                <div class="pros">
-                    <img src="/img/pros-icon.svg" alt="Right Simbol Icon">
+                <div class="flex gap-[5vw]">
+                    <img src="/img/pros-icon.svg" alt="Right Simbol Icon" class="h-[4vw] w-auto">
                     <p>Reward for 1000 Points</p>
                 </div>
                 
-                <div class="pros">
-                    <img src="/img/pros-icon.svg" alt="Right Simbol Icon">
+                <div class="flex gap-[5vw]">
+                    <img src="/img/pros-icon.svg" alt="Right Simbol Icon" class="h-[4vw] w-auto">
                     <p>Cashback 10% via OVO</p>
                 </div>
             </div>
         </section>
 
-        <section class="money-back">
+        <section class="flex flex-col items-center text-center py-[4vh] px-[5vw] gap-[7vw] bg-[var(--feedback-background-color)]">
 
-            <div class="money-section-image">
-                <img src="/img/money-back-image.png" alt="Woman Using The Computer">
-                <div class="comment">Hi, Can you help me? 😔</div>
-                <div class="comment">Can I get my money back?</div>
-                <div class="comment">Thanks for your help!! 😍😍😍😍</div>
+            <div class="bg-[url(/img/feedback-image.png)] bg-no-repeat bg-cover flex flex-col justify-end gap-[4vw] h-[120vw] w-[90vw] rounded-lg">
+                <div id="left-comment" class="self-start bg-[var(--contrast-text-color)] rounded-md text-[length:var(--mobile-clamp-16px)] font-normal text-[#183B56] py-[3vw] px-[5vw] w-[70%] shadow-[5px_5px_15px_0px_rgba(0,0,0,0.1)]">Hi, Can you help me? 😔</div>
+                <div id="right-comment" class="self-end bg-[var(--contrast-text-color)] rounded-md text-[length:var(--mobile-clamp-16px)] font-normal text-[#183B56] py-[3vw] px-[5vw] w-[70%] shadow-[5px_5px_15px_0px_rgba(0,0,0,0.1)]">Can I get my money back?</div>
+                <div id="big-comment" class="w-[89%] bg-[var(--contrast-text-color)] rounded-md text-[length:var(--mobile-clamp-16px)] font-normal text-[#183B56] py-[3vw] px-[5vw] shadow-[5px_5px_15px_0px_rgba(0,0,0,0.1)]">Thanks for your help!! 😍😍😍😍</div>
             </div>
 
-            <h2>100% Money back 
+        </section>
+
+        <section class="flex flex-col items-center text-center py-[4vh] px-[5vw] gap-[7vw] bg-[var(--feedback-background-color)]">
+
+            <h2 class="text-[var(--main-text-color)] text-[length:var(--mobile-clamp-28px)]">100% Money back 
                 Guarantee if You 
                 Cancel
             </h2>
 
-            <p>
+            <p class="text-[var(--secondary-text-color)] text-[length:var(--mobile-clamp-16px)]">
                 We promises in this case. We still 
                 want to refund your money when 
                 you cancel order.
             </p>
 
             <div class="faqs">
-                <div class="selected-faq">
-                    <div class="faq-header">
-                        <img src="/img/filled-green-circle.svg" alt="Filled Green Circle">
+                <div class="flex flex-col p-[7vw] bg-[var(--selected-faq-color)] rounded-lg gap-[3vw]">
+                    <div class="flex items-center justify-between text-[length:var(--mobile-clamp-18px)]">
+                        <img src="/img/filled-green-circle.svg" alt="Filled Green Circle" class="h-[5vw]">
                         <h4>Friendly, Quick, Easy</h4>
-                        <img src="/img/chevron-up.svg" alt="Chevron Pointing Up">
+                        <img src="/img/chevron-up.svg" alt="Chevron Pointing Up" class="h-[5vw]">
                     </div>
                     <p>
                         Business messaging that feels just 
@@ -396,32 +470,31 @@
                     </p>
                 </div>
 
-                <div class="faq">
-                    <div class="faq-header">
-                        <img src="/img/empty-green-circle.svg" alt="Non-filled Green Circle">
+                <div class="flex flex-col p-[5vw] rounded-lg gap-[3vw]">
+                    <div class="flex items-center justify-between text-[length:var(--mobile-clamp-18px)]">
+                        <img src="/img/non-filled-green-circle.svg" alt="Non-filled Green Circle" class="h-[5vw]">
                         <h4>Fast Response Answer</h4>
-                        <img src="/img/chevron-down.svg" alt="Chevron Pointing Down">
+                        <img src="/img/chevron-down.svg" alt="Chevron Pointing Down" class="h-[5vw]">
                     </div>
                 </div>
 
-                <div class="faq">
-                    <div class="faq-header">
-                        <img src="/img/empty-green-circle.svg" alt="Non-filled Green Circle">
+                <div class="flex flex-col p-[5vw] rounded-lg gap-[3vw]">
+                    <div class="flex items-center justify-between text-[length:var(--mobile-clamp-18px)]">
+                        <img src="/img/non-filled-green-circle.svg" alt="Non-filled Green Circle" class="h-[5vw]">
                         <h4>Money Back Guarantee</h4>
-                        <img src="/img/chevron-down.svg" alt="Chevron Pointing Down">
+                        <img src="/img/chevron-down.svg" alt="Chevron Pointing Down" class="h-[5vw]">
                     </div>
                 </div>                
             </div>
         </section>
 
-        <section class="reports">
+        <section class="flex flex-col items-center text-center gap-[10vw] py-[4vh] px-[5vw]">
 
-            <div class="report-hero">
-                <img src="/img/report-image.png" alt="Face Photo of a Costumer">
-                <img src="/img/quote-left.svg" alt="Pair of Left Quotes">
+            <div id="testimonial-photo" class="bg-[url(/img/lorena-testimonial.png)] bg-cover bg-no-repeat flex justify-end flex-col h-[60vw] w-[60vw] rounded-tl-[100%] rounded-tr-[100%] rounded-br-[100%] rounded-bl-none shadow-[5px_5px_15px_0px_rgba(0,0,0,0.1)]">
+                <img src="/img/quote-left.svg" alt="Pair of Left Quotes" class="relative left-0 bottom-0 h-[50%] w-[40%]">
             </div>
 
-            <p>
+            <p id="testimonial-text" class="text-[length:var(--mobile-clamp-20px)] text-[var(--report-text-color)] leading-[10vw]">
                 Travelya, thank you so much 
                 for a well organized trip. We 
                 had a wonderful time. Hard to 
@@ -431,113 +504,111 @@
                 you for everything!
             </p>
 
-            <div class="report-writer">
-                <h4>Lorena Eka Mira</h4>
-                <p>General Manager Bus Association</p>
+            <div class="flex flex-col gap-[2vw]">
+                <h4 id="testimonial-name" class="text-[length:var(--mobile-clamp-18px)] text-[var(--submit-button-color)]">Lorena Eka Mira</h4>
+                <p id="testimonial-role" class="text-[length:var(--mobile-clamp-16px)]">General Manager Bus Association</p>
             </div>
 
-            <div class="pages-indicator">
-                <img src="/img/filled-blue-circle.svg" alt="Filled Blue Circle Icon">
-                <img src="/img/filled-gray-circle.svg" alt="Filled Gray Circle Icon">
-                <img src="/img/filled-gray-circle.svg" alt="Filled Gray Circle Icon">
-                <img src="/img/filled-gray-circle.svg" alt="Filled Gray Circle Icon">
+            <div class="flex gap-[5vw]">
+                <img src="/img/filled-blue-circle.svg" alt="Filled Blue Circle Icon" class="testimonial-dot cursor-pointer h-[3vw] w-auto">
+                <img src="/img/filled-gray-circle.svg" alt="Filled Gray Circle Icon" class="testimonial-dot cursor-pointer h-[3vw] w-auto">
+                <img src="/img/filled-gray-circle.svg" alt="Filled Gray Circle Icon" class="testimonial-dot cursor-pointer h-[3vw] w-auto">
+                <img src="/img/filled-gray-circle.svg" alt="Filled Gray Circle Icon" class="testimonial-dot cursor-pointer h-[3vw] w-auto">
             </div>
         </section>
 
-        <section class="travelers-tips">
+        <section class="flex flex-col items-center text-center py-[4vh] px-[5vw] gap-[7vw]">
 
-            <span class="travelers-tips-subtitle">TIPS FOR TRAVELYER’S</span>
+            <span class="text-[var(--discount-text-color)] text-[length:var(--mobile-clamp-14px)] font-semibold">TIPS FOR TRAVELYER’S</span>
 
-            <h2>
+            <h2 class="text-[var(--main-text-color)] text-[length:var(--mobile-clamp-28px)]">
                 Some Tips From Us
             </h2>
 
-            <p>
+            <p class="text-[var(--secondary-text-color)] text-[length:var(--mobile-clamp-16px)] leading-[8vw]">
                 We share common trends, strategies, 
                 ideas, opinions, short & long stories 
                 from the team behind company.
             </p>
 
-            <div class="tips-cards">
-                <div class="tips-card">
-                    <img src="/img/from-wetlands-image.png" alt="Man Waiting His Plane on Airport">
-                    <h2>
+            <div class="flex flex-col items-center gap-[5vw]">
+                <div id="wetlands" class="bg-no-repeat bg-cover flex flex-col justify-end items-start text-left gap-[5vw] h-[115vw] w-[85vw] p-[4vw] rounded-lg">
+                    <h2 class="text-[var(--contrast-text-color)] text-[length:var(--mobile-clamp-24px)]">                        
                         From Wetlands To 
                         Canals and Dams 
                         Amsterdam Is 
                         Alive. Looks who’s 
                         out
                     </h2>
-                    <div class="see-offers">
-                        <a href="#">
+                    <div class="flex items-center">
+                        <a href="#" class="text-[var(--discount-text-color)] no-underline text-[length:var(--mobile-clamp-18px)] font-semibold flex flex-row items-center gap-[5vw]">
                             See All Offers
-                            <img src="/img/green-east-arrow.svg" alt="Green Arrow Pointing East">
+                            <img src="/img/green-east-arrow.svg" alt="Green Arrow Pointing East" class="h-[4vw]">
                         </a>
                     </div>
                 </div>
 
-                <div class="tips-card">
-                    <img src="/img/global-travel-image.png" alt="Travel Itens on a Table">
-                    <h2>
+                <div id="global" class="bg-no-repeat bg-cover flex flex-col justify-end items-start text-left gap-[5vw] h-[115vw] w-[85vw] p-[4vw] rounded-lg">
+                    <h2 class="text-[var(--contrast-text-color)] text-[length:var(--mobile-clamp-24px)]">
                         Global Travel And 
                         Vacations Luxury 
                         Travel On A Tight 
                         Budget
                     </h2>
-                    <div class="see-offers">
-                        <a href="#">
+                    <div class="flex flex-row items-center">
+                        <a href="#" class="text-[var(--discount-text-color)] no-underline text-[length:var(--mobile-clamp-18px)] font-semibold flex flex-row items-center gap-[5vw]">
                             See All Offers
-                            <img src="/img/green-east-arrow.svg" alt="Green Arrow Pointing East">
+                            <img src="/img/green-east-arrow.svg" alt="Green Arrow Pointing East" class="h-[4vw]">
                         </a>
                     </div>
                 </div>
             </div>
 
-            <img src="/img/blue-east-arrow.svg" alt="Blue Arrow Pointing East">
+            <img id="see-more-arrow" src="/img/blue-east-arrow.svg" alt="Blue Arrow Pointing East" class="box-content block h-[5vw] w-auto p-[5vw] rounded-full shadow-[5px_5px_15px_0px_rgba(0,0,0,0.1)]">
         </section>
 
-        <section class="rating">
-            <section class="costumers">
-                <div class="costumers-pics">
-                    <img src="/img/costumers-pics/costumer1.png" alt="Man Profile Picture">
-                    <img src="/img/costumers-pics/Costumer2.png" alt="Woman Profile Picture">
-                    <img src="/img/costumers-pics/costumer3.png" alt="Man Profile Picture">
+        <section class="flex flex-col items-center text-center py-[4vh] px-[15vw] gap-[7vw]">
+            <section class="flex flex-col gap-[6vw]">
+                <div class="flex justify-center">
+                    <img src="/img/costumers-pics/costumer1.png" alt="Man Profile Picture" class="h-[13vw]">
+                    <img src="/img/costumers-pics/Costumer2.png" alt="Woman Profile Picture" class="h-[13vw]">
+                    <img src="/img/costumers-pics/costumer3.png" alt="Man Profile Picture" class="h-[13vw]">
                 </div>
                 <div class="costumers-content">
-                    <p>
-                        <span class="bold">Friendly</span> 
+                    <p class="text-[length:var(--mobile-clamp-16px)] text-[var(--main-text-color)]">
+                        <span class="font-bold">Friendly</span> 
                         customer support team
                     </p>
                 </div>
             </section>
 
-            <section class="trustpilot">
-                <div class="trustpilot-logo">
-                    <img src="/img/green-star.svg" alt="Green TrustPilot Star Icon">
-                    <img src="/img/trustpilot-logo.png" alt="TrustPilot Logo">
+            <section class="flex flex-col items-center gap-[5vw]">
+                <div class="flex items-end gap-[1vw]">
+                    <img id="logo-star" src="/img/green-star.svg" alt="Green TrustPilot Star Icon" class="h-[10vw] w-auto">
+                    <img id="logo-name" src="/img/trustpilot-logo.png" alt="TrustPilot Logo" class="h-[7vw] w-auto">
                 </div>
 
-                <div class="star">
-                    <img src="/img/rating-star.svg" alt="Rating Orange Star">
-                    <img src="/img/rating-star.svg" alt="Rating Orange Star">
-                    <img src="/img/rating-star.svg" alt="Rating Orange Star">
-                    <img src="/img/rating-star.svg" alt="Rating Orange Star">
-                    <img src="/img/rating-star.svg" alt="Rating Orange Star">
+                <div class="flex flex-row gap-[1vw]">
+                    <img src="/img/rating-star.svg" alt="Rating Orange Star" class="h-[6vw] w-auto">
+                    <img src="/img/rating-star.svg" alt="Rating Orange Star" class="h-[6vw] w-auto">
+                    <img src="/img/rating-star.svg" alt="Rating Orange Star" class="h-[6vw] w-auto">
+                    <img src="/img/rating-star.svg" alt="Rating Orange Star" class="h-[6vw] w-auto">
+                    <img src="/img/rating-star.svg" alt="Rating Orange Star" class="h-[6vw] w-auto">
                 </div>
 
-                <p>
-                    <span class="bold">4.6 out of 5 stars</span> 
+                <p class="text-[var(--main-text-color)] text-[length:var(--mobile-clamp-16px)]">
+                    <span class="font-bold">4.6 out of 5 stars</span> 
                     from 8.6k 
                     reviews
                 </p>
 
             </section>
             
-            <section class="insurance">
-                <img src="/img/card-icon/easy-icon.svg" alt="Like Icon">
-                <p>
+            <section class="flex flex-col items-center">
+                <img src="/img/card-icon/easy-icon.svg" alt="Like Icon" class="h-[15vw] w-auto">
+                <p class="text-[var(--main-text-color)] text-[length:var(--mobile-clamp-16px)]">
                     We’re making 
-                    <span class="bold">insurance as simple as</span> 
+                    <span class="font-bold">insurance as simple as</span> 
                     can be
                 </p>
             </section>
@@ -546,50 +617,50 @@
 
     </main>
     
-    <footer>
-        <div class="redirects">
-            <article>
-                <h3>Product</h3>
-                <p>Landing page</p>
-                <p>Features</p>
-                <p>Documentation</p>
-                <p>Referral Program</p>
-                <p>Pricing</p>
+    <footer class="flex flex-col items-center py-[4vh] px-[5vw] gap-[7vw] bg-[var(--footer-background-color)] text-[var(--footer-main-color)]">
+        <div class="flex flex-wrap justify-center gap-[7.5vw]">
+            <article class="w-[40vw] flex flex-col items-start gap-[5vw]">
+                <h3 class="text-[length:var(--mobile-clamp-16px)]">Product</h3>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Landing page</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Features</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Documentation</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Referral Program</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Pricing</p>
             </article>
     
-            <article>
-                <h3>Services</h3>
-                <p>Documentation</p>
-                <p>Design</p>
-                <p>Themes</p>
-                <p>Illustrations</p>
-                <p>UI Kit</p>
+            <article class="w-[40vw] flex flex-col items-start gap-[5vw]">
+                <h3 class="text-[length:var(--mobile-clamp-16px)]">Services</h3>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Documentation</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Design</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Themes</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Illustrations</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">UI Kit</p>
             </article>
     
-            <article>
-                <h3>Company</h3>
-                <p>About</p>
-                <p>Terms</p>
-                <p>Privacy Policy</p>
-                <p>Careers</p>
+            <article class="w-[40vw] flex flex-col items-start gap-[5vw]">
+                <h3 class="text-[length:var(--mobile-clamp-16px)]">Company</h3>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">About</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Terms</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Privacy Policy</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Careers</p>
             </article>
     
-            <article>
-                <h3>More</h3>
-                <p>Documentation</p>
-                <p>License</p>
-                <p>Changelog</p>
+            <article class="w-[40vw] flex flex-col items-start gap-[5vw]">
+                <h3 class="text-[length:var(--mobile-clamp-16px)]">More</h3>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Documentation</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">License</p>
+                <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">Changelog</p>
             </article>
         </div>
     
-        <div class="footer-content">
-            <img src="/img/logo.svg" alt="Logo da empresa Ehya">
+        <div class="flex flex-col items-center text-center gap-[7.5vw] text-[length:var(--mobile-clamp-14px)]">
+            <img src="/img/logo.svg" alt="Logo da empresa Ehya" class="h-[6vw] w-auto">
             
-            <p>
+            <p class="text-[length:var(--mobile-clamp-14px)] text-[var(--footer-secondary-color)]">
                 Build a modern and creative website with crealand
             </p>
 
-            <div class="contacts">
+            <div class="flex flex-row items-center gap-[8vw]">
                 <img src="/img/footer-icons/google.svg" alt="Redirect Contact Google icon">
                 <img src="/img/footer-icons/twitter.svg" alt="Redirect Contact Twitter icon">
                 <img src="/img/footer-icons/instagram.svg" alt="Redirect Contact Instagram icon">
@@ -602,4 +673,5 @@
     </footer>
 
 </body>
+<script src="js/app.js" defer></script>
 </html>

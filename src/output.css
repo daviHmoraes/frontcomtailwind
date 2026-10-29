@@ -1,0 +1,757 @@
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+      "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --spacing: 0.25rem;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring:where(:not(iframe)) {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .relative {
+    position: relative;
+  }
+  .bottom-0 {
+    bottom: 0px;
+  }
+  .left-0 {
+    left: 0px;
+  }
+  .mx-\[5vw\] {
+    margin-inline: 5vw;
+  }
+  .mb-\[5vw\] {
+    margin-bottom: 5vw;
+  }
+  .box-content {
+    box-sizing: content-box;
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .table {
+    display: table;
+  }
+  .h-\[3vw\] {
+    height: 3vw;
+  }
+  .h-\[4vw\] {
+    height: 4vw;
+  }
+  .h-\[5vw\] {
+    height: 5vw;
+  }
+  .h-\[6vw\] {
+    height: 6vw;
+  }
+  .h-\[7vw\] {
+    height: 7vw;
+  }
+  .h-\[10vw\] {
+    height: 10vw;
+  }
+  .h-\[13vw\] {
+    height: 13vw;
+  }
+  .h-\[15vw\] {
+    height: 15vw;
+  }
+  .h-\[50\%\] {
+    height: 50%;
+  }
+  .h-\[60vw\] {
+    height: 60vw;
+  }
+  .h-\[100vw\] {
+    height: 100vw;
+  }
+  .h-\[115vw\] {
+    height: 115vw;
+  }
+  .h-\[120vw\] {
+    height: 120vw;
+  }
+  .h-auto {
+    height: auto;
+  }
+  .min-h-\[100vh\] {
+    min-height: 100vh;
+  }
+  .w-\[12\.5vw\] {
+    width: 12.5vw;
+  }
+  .w-\[40\%\] {
+    width: 40%;
+  }
+  .w-\[40vw\] {
+    width: 40vw;
+  }
+  .w-\[45\%\] {
+    width: 45%;
+  }
+  .w-\[60vw\] {
+    width: 60vw;
+  }
+  .w-\[70\%\] {
+    width: 70%;
+  }
+  .w-\[75vw\] {
+    width: 75vw;
+  }
+  .w-\[85vw\] {
+    width: 85vw;
+  }
+  .w-\[89\%\] {
+    width: 89%;
+  }
+  .w-\[90vw\] {
+    width: 90vw;
+  }
+  .w-auto {
+    width: auto;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .resize {
+    resize: both;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .gap-\[1vw\] {
+    gap: 1vw;
+  }
+  .gap-\[2\.5vw\] {
+    gap: 2.5vw;
+  }
+  .gap-\[2vw\] {
+    gap: 2vw;
+  }
+  .gap-\[3vw\] {
+    gap: 3vw;
+  }
+  .gap-\[4vh\] {
+    gap: 4vh;
+  }
+  .gap-\[4vw\] {
+    gap: 4vw;
+  }
+  .gap-\[5vw\] {
+    gap: 5vw;
+  }
+  .gap-\[6vw\] {
+    gap: 6vw;
+  }
+  .gap-\[7\.5vw\] {
+    gap: 7.5vw;
+  }
+  .gap-\[7vw\] {
+    gap: 7vw;
+  }
+  .gap-\[8vw\] {
+    gap: 8vw;
+  }
+  .gap-\[10vw\] {
+    gap: 10vw;
+  }
+  .self-center {
+    align-self: center;
+  }
+  .self-end {
+    align-self: flex-end;
+  }
+  .self-start {
+    align-self: flex-start;
+  }
+  .rounded-\[5px\] {
+    border-radius: 5px;
+  }
+  .rounded-\[2000px\] {
+    border-radius: 2000px;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
+  .rounded-tl-\[100\%\] {
+    border-top-left-radius: 100%;
+  }
+  .rounded-tl-lg {
+    border-top-left-radius: var(--radius-lg);
+  }
+  .rounded-tr-\[100\%\] {
+    border-top-right-radius: 100%;
+  }
+  .rounded-tr-lg {
+    border-top-right-radius: var(--radius-lg);
+  }
+  .rounded-br-\[100\%\] {
+    border-bottom-right-radius: 100%;
+  }
+  .rounded-bl-none {
+    border-bottom-left-radius: 0;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-0 {
+    border-style: var(--tw-border-style);
+    border-width: 0px;
+  }
+  .border-solid {
+    --tw-border-style: solid;
+    border-style: solid;
+  }
+  .border-\[var\(--card-border-color\)\] {
+    border-color: var(--card-border-color);
+  }
+  .border-\[var\(--input-border-color\)\] {
+    border-color: var(--input-border-color);
+  }
+  .border-\[var\(--submit-button-color\)\] {
+    border-color: var(--submit-button-color);
+  }
+  .bg-\[\#1565d833\] {
+    background-color: #1565d833;
+  }
+  .bg-\[var\(--contrast-text-color\)\] {
+    background-color: var(--contrast-text-color);
+  }
+  .bg-\[var\(--feedback-background-color\)\] {
+    background-color: var(--feedback-background-color);
+  }
+  .bg-\[var\(--footer-background-color\)\] {
+    background-color: var(--footer-background-color);
+  }
+  .bg-\[var\(--popular-destination-background-color\)\] {
+    background-color: var(--popular-destination-background-color);
+  }
+  .bg-\[var\(--selected-faq-color\)\] {
+    background-color: var(--selected-faq-color);
+  }
+  .bg-\[var\(--submit-button-color\)\] {
+    background-color: var(--submit-button-color);
+  }
+  .bg-\[url\(\/img\/background-image\.png\)\] {
+    background-image: url(/img/background-image.png);
+  }
+  .bg-\[url\(\/img\/destinations\/bali\.png\)\] {
+    background-image: url(/img/destinations/bali.png);
+  }
+  .bg-\[url\(\/img\/destinations\/paris\.png\)\] {
+    background-image: url(/img/destinations/paris.png);
+  }
+  .bg-\[url\(\/img\/destinations\/santorini\.png\)\] {
+    background-image: url(/img/destinations/santorini.png);
+  }
+  .bg-\[url\(\/img\/destinations\/venice\.png\)\] {
+    background-image: url(/img/destinations/venice.png);
+  }
+  .bg-\[url\(\/img\/feedback-image\.png\)\] {
+    background-image: url(/img/feedback-image.png);
+  }
+  .bg-\[url\(\/img\/holiday-image\.png\)\] {
+    background-image: url(/img/holiday-image.png);
+  }
+  .bg-\[url\(\/img\/lorena-testimonial\.png\)\] {
+    background-image: url(/img/lorena-testimonial.png);
+  }
+  .bg-\[url\(\/img\/lorena\.png\)\] {
+    background-image: url(/img/lorena.png);
+  }
+  .bg-\[url\(\/img\/recommended-destination\.png\)\] {
+    background-image: url(/img/recommended-destination.png);
+  }
+  .bg-\[url\(\/img\/report-image\.png\)\] {
+    background-image: url(/img/report-image.png);
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
+  .p-\[1vw\] {
+    padding: 1vw;
+  }
+  .p-\[3vw\] {
+    padding: 3vw;
+  }
+  .p-\[4vw\] {
+    padding: 4vw;
+  }
+  .p-\[5vw\] {
+    padding: 5vw;
+  }
+  .p-\[7vw\] {
+    padding: 7vw;
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-\[3\.5vw\] {
+    padding-inline: 3.5vw;
+  }
+  .px-\[5vw\] {
+    padding-inline: 5vw;
+  }
+  .px-\[7vw\] {
+    padding-inline: 7vw;
+  }
+  .px-\[15vw\] {
+    padding-inline: 15vw;
+  }
+  .py-\[2\.3vw\] {
+    padding-block: 2.3vw;
+  }
+  .py-\[2vw\] {
+    padding-block: 2vw;
+  }
+  .py-\[3vw\] {
+    padding-block: 3vw;
+  }
+  .py-\[4vh\] {
+    padding-block: 4vh;
+  }
+  .py-\[5vh\] {
+    padding-block: 5vh;
+  }
+  .py-\[10vh\] {
+    padding-block: 10vh;
+  }
+  .pt-0 {
+    padding-top: 0px;
+  }
+  .pr-\[5vw\] {
+    padding-right: 5vw;
+  }
+  .pb-\[5vw\] {
+    padding-bottom: 5vw;
+  }
+  .pl-\[5vw\] {
+    padding-left: 5vw;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .font-\[\'Open_Sans\'\,_sans-serif\] {
+    font-family: 'Open Sans', sans-serif;
+  }
+  .text-\[length\:var\(--\)\] {
+    font-size: var(--);
+  }
+  .text-\[length\:var\(--mobile-clamp-14px\)\] {
+    font-size: var(--mobile-clamp-14px);
+  }
+  .text-\[length\:var\(--mobile-clamp-16px\)\] {
+    font-size: var(--mobile-clamp-16px);
+  }
+  .text-\[length\:var\(--mobile-clamp-18px\)\] {
+    font-size: var(--mobile-clamp-18px);
+  }
+  .text-\[length\:var\(--mobile-clamp-20px\)\] {
+    font-size: var(--mobile-clamp-20px);
+  }
+  .text-\[length\:var\(--mobile-clamp-24px\)\] {
+    font-size: var(--mobile-clamp-24px);
+  }
+  .text-\[length\:var\(--mobile-clamp-28px\)\] {
+    font-size: var(--mobile-clamp-28px);
+  }
+  .text-\[length\:var\(--mobile-clamp-32px\)\] {
+    font-size: var(--mobile-clamp-32px);
+  }
+  .leading-\[7\.5vw\] {
+    --tw-leading: 7.5vw;
+    line-height: 7.5vw;
+  }
+  .leading-\[8vw\] {
+    --tw-leading: 8vw;
+    line-height: 8vw;
+  }
+  .leading-\[10vw\] {
+    --tw-leading: 10vw;
+    line-height: 10vw;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-extralight {
+    --tw-font-weight: var(--font-weight-extralight);
+    font-weight: var(--font-weight-extralight);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .text-\[\#183B56\] {
+    color: #183B56;
+  }
+  .text-\[length\] {
+    color: length;
+  }
+  .text-\[var\(--contrast-text-color\)\] {
+    color: var(--contrast-text-color);
+  }
+  .text-\[var\(--discount-text-color\)\] {
+    color: var(--discount-text-color);
+  }
+  .text-\[var\(--footer-main-color\)\] {
+    color: var(--footer-main-color);
+  }
+  .text-\[var\(--footer-secondary-color\)\] {
+    color: var(--footer-secondary-color);
+  }
+  .text-\[var\(--input-border-color\)\] {
+    color: var(--input-border-color);
+  }
+  .text-\[var\(--main-text-color\)\] {
+    color: var(--main-text-color);
+  }
+  .text-\[var\(--report-text-color\)\] {
+    color: var(--report-text-color);
+  }
+  .text-\[var\(--secondary-text-color\)\] {
+    color: var(--secondary-text-color);
+  }
+  .text-\[var\(--submit-button-color\)\] {
+    color: var(--submit-button-color);
+  }
+  .text-\[var\(--subtitle-text-color\)\] {
+    color: var(--subtitle-text-color);
+  }
+  .no-underline {
+    text-decoration-line: none;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .decoration-0 {
+    text-decoration-thickness: 0px;
+  }
+  .shadow-\[5px_5px_15px_0px_rgba\(0\,0\,0\,0\.1\)\] {
+    --tw-shadow: 5px 5px 15px 0px var(--tw-shadow-color, rgba(0,0,0,0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
+    }
+  }
+}

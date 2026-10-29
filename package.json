@@ -1,0 +1,25 @@
+{
+  "name": "provafronttailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daviHmoraes/ProvaFrontResponsividade.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/daviHmoraes/ProvaFrontResponsividade/issues"
+  },
+  "homepage": "https://github.com/daviHmoraes/ProvaFrontResponsividade#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
