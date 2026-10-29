@@ -27,7 +27,7 @@ Após executar o Live Server, acesse:
 
 ## Estrutura
 
-    .
+´´´
 └── ProvaFrontTailWind/
     ├── .history/
     ├── .vscode/
@@ -49,7 +49,7 @@ Após executar o Live Server, acesse:
     ├── package-lock.json
     ├── package.json
     └── README.md
-
+´´´
 ## Autor
 
 Davi Heinzen de Moraes
